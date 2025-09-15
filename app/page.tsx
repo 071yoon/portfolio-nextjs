@@ -19,8 +19,8 @@ export default function Page() {
           {expandAll ? 'Collapse All' : 'Expand All'}
         </button>
       </div>
-      <Projects expandAll={expandAll} />
       <WorkExperience expandAll={expandAll} />
+      <Projects expandAll={expandAll} />
       <EducationCertificate />
 
       {/* Blog and Connect sections can be refactored similarly if desired */}
