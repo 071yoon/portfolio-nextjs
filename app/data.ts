@@ -31,6 +31,22 @@ type SocialLink = {
   link: string
 }
 
+type Education = {
+  image: string
+  title: string
+  position: string
+  start: string
+  end: string
+  description: string[]
+}
+
+type Certificate = {
+  image: string
+  title: string
+  position: string
+  date: string
+}
+
 export const ABOUT_ME: {
   name: string
   description: string
@@ -165,6 +181,50 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
   },
 ]
 
+export const EDUCATION: Education[] = [
+  {
+    image: 'konkuk.png',
+    title: 'Konkuk University',
+    position: 'Smart ICT Engineering',
+    start: '2017.03',
+    end: '2024.02',
+    description: ['전체: 4.03/4.5 | 전공: 4.26/4.5', "2022-1 Dean's List 수상"],
+  },
+]
+
+export const CERTIFICATE: Certificate[] = [
+  {
+    image: 'engineer-information-processing.png',
+    title: '정보처리기사',
+    position: '과학기술정보통신부',
+    date: '2024.06.18',
+  },
+  {
+    image: 'sqld.png',
+    title: 'SQLD',
+    position: 'SQL Developer | 한국데이터베이스진흥원',
+    date: '2024.04.05',
+  },
+  {
+    image: 'toeic-speaking.png',
+    title: 'TOEIC Speaking',
+    position: '점수: 170, 등급: Advanced Low',
+    date: '2023.09.20',
+  },
+  {
+    image: 'toeic.png',
+    title: 'TOEIC',
+    position: '점수: 935',
+    date: '2023.08.28',
+  },
+  {
+    image: 'topcit.png',
+    title: 'TOPCIT',
+    position: '점수: 570',
+    date: '2022.10.29',
+  },
+]
+
 export const BLOG_POSTS: BlogPost[] = [
   {
     title: 'Exploring the Intersection of Design, AI, and Design Engineering',
@@ -198,20 +258,16 @@ export const BLOG_POSTS: BlogPost[] = [
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     label: 'Github',
-    link: 'https://github.com/ibelick',
-  },
-  {
-    label: 'Twitter',
-    link: 'https://twitter.com/ibelick',
+    link: 'https://github.com/071yoon',
   },
   {
     label: 'LinkedIn',
-    link: 'https://www.linkedin.com/in/ibelick',
+    link: 'https://www.linkedin.com/in/yeonggi-yoon/',
   },
   {
     label: 'Instagram',
-    link: 'https://www.instagram.com/ibelick',
+    link: 'https://www.instagram.com/071yoon',
   },
 ]
 
-export const EMAIL = 'your@email.com'
+export const EMAIL = 'yeonggi@kakao.com'

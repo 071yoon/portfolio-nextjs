@@ -95,7 +95,7 @@ export default function Projects({ expandAll }: { expandAll: boolean }) {
   return (
     <motion.section variants={VARIANTS_SECTION} transition={TRANSITION_SECTION}>
       <h3 className="mb-5 text-lg font-medium">Selected Projects</h3>
-      <div className="space-y-4">
+      <div className="mb-8 space-y-4">
         {PROJECTS.map((project) => (
           <ProjectListItem
             key={project.id}

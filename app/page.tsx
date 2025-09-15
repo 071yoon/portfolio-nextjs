@@ -1,5 +1,6 @@
 'use client'
 
+import EducationCertificate from './education-certificate'
 import Personal from './personal'
 import Projects from './projects'
 import WorkExperience from './work-experience'
@@ -20,6 +21,8 @@ export default function Page() {
       </div>
       <Projects expandAll={expandAll} />
       <WorkExperience expandAll={expandAll} />
+      <EducationCertificate />
+
       {/* Blog and Connect sections can be refactored similarly if desired */}
     </>
   )

@@ -20,7 +20,7 @@ function WorkExperienceListItem({
   const [isOpen, setIsOpen] = useState(false)
   const open = expandAll || isOpen
   return (
-    <div className="rounded-2xl border border-zinc-200 bg-gradient-to-br from-white/90 to-zinc-100/80 p-4 shadow dark:border-zinc-700 dark:from-zinc-900/80 dark:to-zinc-800/80">
+    <div className="rounded-2xl border border-zinc-200 bg-white/80 p-4 shadow-sm dark:border-zinc-700 dark:bg-zinc-800/80">
       <motion.div
         initial={false}
         onClick={() => setIsOpen(!isOpen)}
@@ -124,7 +124,7 @@ export default function WorkExperience({ expandAll }: { expandAll: boolean }) {
   return (
     <motion.section variants={VARIANTS_SECTION} transition={TRANSITION_SECTION}>
       <h3 className="mb-5 text-lg font-medium">Work Experience</h3>
-      <div className="space-y-4">
+      <div className="mb-8 space-y-4">
         {WORK_EXPERIENCE.map((job) => (
           <WorkExperienceListItem
             key={job.id}
