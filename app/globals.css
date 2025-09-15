@@ -20,6 +20,13 @@
   }
 }
 
+@media print {
+  .avoid-break {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
 :root {
   --sh-class: #7aa2f7;
   --sh-sign: #89ddff;

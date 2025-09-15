@@ -1,9 +1,19 @@
 'use client'
+
 import { AnimatedBackground } from '@/components/ui/animated-background'
 import { TextLoop } from '@/components/ui/text-loop'
-import { MonitorIcon, MoonIcon, SunIcon } from 'lucide-react'
+import {
+  MonitorIcon,
+  MoonIcon,
+  SunIcon,
+  Github,
+  Linkedin,
+  Instagram,
+  Mail,
+} from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
+import { SOCIAL_LINKS, EMAIL } from './data'
 
 const THEMES_OPTIONS = [
   {
@@ -68,15 +78,40 @@ function ThemeSwitch() {
 
 export function Footer() {
   return (
-    <footer className="mt-24 border-t border-zinc-100 px-0 py-4 dark:border-zinc-800">
-      <div className="flex items-center justify-between">
-        <a href="https://github.com/ibelick/nim" target="_blank">
-          <TextLoop className="text-xs text-zinc-500">
-            <span>© 2024 Nim.</span>
-            <span>Built with Motion-Primitives.</span>
-          </TextLoop>
-        </a>
-        <div className="text-xs text-zinc-400">
+    <footer className="mt-8 border-t border-zinc-100 px-0 py-4 dark:border-zinc-800">
+      <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <div className="flex items-center gap-4">
+          {SOCIAL_LINKS.map((social) => {
+            let Icon = null
+            if (social.label.toLowerCase() === 'github') Icon = Github
+            else if (social.label.toLowerCase() === 'linkedin') Icon = Linkedin
+            else if (social.label.toLowerCase() === 'instagram')
+              Icon = Instagram
+            return (
+              <a
+                key={social.label}
+                href={social.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-zinc-500 transition-colors hover:text-zinc-900 dark:hover:text-zinc-100"
+                aria-label={social.label}
+              >
+                {Icon ? <Icon className="h-5 w-5" /> : social.label}
+              </a>
+            )
+          })}
+          <a
+            href={`mailto:${EMAIL}`}
+            className="text-zinc-500 transition-colors hover:text-zinc-900 dark:hover:text-zinc-100"
+            aria-label="Email"
+          >
+            <Mail className="h-5 w-5" />
+          </a>
+        </div>
+        <div className="flex items-center gap-4">
+          <span className="text-xs text-zinc-500">
+            © {new Date().getFullYear()} YeongGi Yoon.
+          </span>
           <ThemeSwitch />
         </div>
       </div>

@@ -8,7 +8,7 @@ export default function EducationCertificate() {
         {EDUCATION.map((edu, idx) => (
           <li
             key={edu.title + edu.start + edu.end + idx}
-            className="rounded-2xl border border-zinc-200 bg-white/80 p-4 shadow-sm dark:border-zinc-700 dark:bg-zinc-800/80"
+            className="avoid-break rounded-2xl border border-zinc-200 bg-white/80 p-4 shadow-sm dark:border-zinc-700 dark:bg-zinc-800/80"
           >
             <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
               <div className="flex items-center gap-3">
@@ -47,7 +47,7 @@ export default function EducationCertificate() {
         {CERTIFICATE.map((cert, idx) => (
           <li
             key={cert.title + cert.date + idx}
-            className="rounded-2xl border border-zinc-200 bg-white/80 p-4 shadow-sm dark:border-zinc-700 dark:bg-zinc-800/80"
+            className="avoid-break rounded-2xl border border-zinc-200 bg-white/80 p-4 shadow-sm dark:border-zinc-700 dark:bg-zinc-800/80"
           >
             <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
               <div className="flex items-center gap-3">
@@ -55,7 +55,7 @@ export default function EducationCertificate() {
                   <img
                     src={`/images/${cert.image}`}
                     alt={cert.title}
-                    className="h-10 w-10 rounded border border-green-100 object-contain dark:border-green-900"
+                    className="h-10 w-10 rounded bg-white object-contain"
                   />
                 )}
                 <div>

@@ -19,7 +19,7 @@ function ProjectListItem({
   const [isOpen, setIsOpen] = useState(false)
   const open = expandAll || isOpen
   return (
-    <div className="rounded-2xl border border-zinc-200 bg-white/80 p-4 shadow-sm dark:border-zinc-700 dark:bg-zinc-800/80">
+    <div className="avoid-break rounded-2xl border border-zinc-200 bg-white/80 p-4 shadow-sm dark:border-zinc-700 dark:bg-zinc-800/80">
       <motion.div
         initial={false}
         onClick={() => setIsOpen(!isOpen)}

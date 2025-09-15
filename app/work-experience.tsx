@@ -20,14 +20,14 @@ function WorkExperienceListItem({
   const [isOpen, setIsOpen] = useState(false)
   const open = expandAll || isOpen
   return (
-    <div className="rounded-2xl border border-zinc-200 bg-white/80 p-4 shadow-sm dark:border-zinc-700 dark:bg-zinc-800/80">
+    <div className="avoid-break rounded-2xl border border-zinc-200 bg-white/80 p-4 shadow-sm dark:border-zinc-700 dark:bg-zinc-800/80">
       <motion.div
         initial={false}
         onClick={() => setIsOpen(!isOpen)}
         className="flex cursor-pointer items-start justify-between"
       >
         <div className="flex items-start gap-4">
-          <div className="flex h-[60px] w-[60px] items-center justify-center">
+          <div className="flex h-[70px] w-[70px] items-center justify-center rounded-lg bg-white">
             <Image
               src={`/images/${item.image}`}
               alt={item.company}
@@ -69,7 +69,7 @@ function WorkExperienceListItem({
               {item.project.map((proj) => (
                 <div
                   key={proj.id}
-                  className="rounded-lg border border-blue-100 bg-blue-50/50 p-3 shadow-sm dark:border-blue-900 dark:bg-blue-950/70"
+                  className="rounded-lg border border-slate-200 p-3 shadow-sm dark:border-slate-700"
                 >
                   <div className="flex items-center justify-between">
                     <h5 className="font-medium text-zinc-800 dark:text-zinc-200">
