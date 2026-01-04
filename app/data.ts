@@ -133,7 +133,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
           'DB 설계 및 운영',
           '외부 시스템 연동을 위한 RESTful API 인터페이스 개발',
         ],
-        stack: ['Vue', 'Typescript', 'Spring Boot', 'MariaDB', 'MQTT'],
+        stack: ['Vue', 'React', 'Typescript', 'Spring Boot', 'MariaDB', 'MQTT'],
         id: 'vlms',
       },
       {
