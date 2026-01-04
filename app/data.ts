@@ -51,10 +51,16 @@ export const ABOUT_ME: {
   name: string
   description: string
   image: string
+  summary: string[]
 } = {
   name: 'YeongGi Yoon',
   description: 'Software Engineer',
   image: 'yeonggi.gif',
+  summary: [
+    '주도적으로 서비스를 만들어나가는 것을 좋아하는 3년차 소프트웨어 엔지니어 윤영기입니다.',
+    '최근 프로젝트에서 MQTT 통신 최적화와 비동기 처리를 도입하여 트랜잭션 처리 시간을 55% 이상 단축한 경험이 있습니다.',
+    '단순히 눈 앞의 문제를 해결하는 것을 넘어, 장기적인 관점에서 안정적이고 확장성 있는 시스템을 설계하는 것을 중요하게 생각합니다.',
+  ],
 }
 
 export const PROJECTS: Project[] = [
@@ -119,12 +125,13 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
         name: 'Hyundai Glovis Vehicle Location Management System',
         description: '글로비스 차량 위치 관리 시스템(VLMS) 개발',
         detail: [
-          'Web FrontEnd 개발',
-          'Web BackEnd 개발',
-          '외부 시스템과의 Restful API Interface 서버 개발',
-          'MQTT 통신을 위한 Publish/Subscribe 서버 개발',
+          'Vue.js 기반 관제 화면을 포함한 풀스택 웹 개발',
+          'React.js 기반 시스템 테스트 도구 개발',
+          'MQTT EMQX 브로커 4중 클러스터링 및 분산 처리 시스템 구축',
+          '브로커에서 수신한 대량의 실시간 데이터를 저장 후 배치 처리하는 시스템 개발',
+          '외부 시스템 연동 로직 비동기 처리를 통해 1,000건 트랜잭션 처리 시간을 3.6초에서 1.6초로 최적화 (55% 성능 개선)',
           'DB 설계 및 운영',
-          '시스템 내 물리 태그들과의 최적화 통신을 위한 분산 처리 시스템 개발',
+          '외부 시스템 연동을 위한 RESTful API 인터페이스 개발',
         ],
         stack: ['Vue', 'Typescript', 'Spring Boot', 'MariaDB', 'MQTT'],
         id: 'vlms',
